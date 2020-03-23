@@ -5,6 +5,7 @@ activity reference : 8-timer, 19-for pop-up highscore?, 23 -local storage, 27-fo
 
 useful links:
     changing display: https://www.w3schools.com/jsref/prop_style_display.asp 
+    reference: https://www.sitepoint.com/simple-javascript-quiz/
 
 
 pseudocoding:
