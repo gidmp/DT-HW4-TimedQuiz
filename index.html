@@ -6,26 +6,41 @@
     <title>Timed Quiz</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
     <!--header of the app, showing highscore and timer-->
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">View Highscore</a>
-        <p class="navbar-brand" style="float:right;" >Time Remaining:<br/><span id="timer" style= "float: right;">??</span></p>
+        <h5 class="time"></h5>
     </nav>
 
-    <!--main body-->
-    <div class="jumbotron text-center">
-        <div class="container">
-            <div id="question"><h4>spoodle</h4></div>
+    <!--showing the questions and choices-->
+    <div id="quizContainer" class="container text-center hide">
+        <div id="question"><h4>spoodle</h4></div>
+        <div id = "answerButton">
             <button type="button" class="block btn btn-primary btn-sm">answer 1</button>
             <button type="button" class="block btn btn-secondary btn-sm">answer 2</button>        
             <button type="button" class="block btn btn-primary btn-sm">answer 3</button>
-            <button type="button" class="block btn btn-secondary btn-sm">answer 4</button>        </div>
+            <button type="button" class="block btn btn-secondary btn-sm">answer 4</button>      
         </div>
     </div>
+
+    <!--Highscore-->
+    <div id = "highScore" class = "hide">
+        <h1>Highscore</h1>
+    </div>
+
+    <!--Start quiz-->
+    <div class = "intro">
+        <h2>Coding Quiz Challenge</h2>
+        <p>Thi is a score-based timed quiz. Any wrong anser will result in your timer being cut down. good luck~</p>
+        <button type="button" id = "startButton" class="btn btn-primary btn-sm">Start Quiz</button>
+    </div>
+
+    
+
 
     <script src="script.js"></script>
 </body>

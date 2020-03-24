@@ -1,3 +1,28 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
 .block {
     display: block;
+}
+
+.intro{
+    display: block;
+    text-align: center;
+}
+
+#startButton{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.btn{
+    background-color: purple;
+    margin: 10px 0;
+}
+
+.hide{
+    display: none;
 }
