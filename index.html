@@ -35,11 +35,26 @@
     <!--Start quiz-->
     <div class = "intro">
         <h2>Coding Quiz Challenge</h2>
-        <p>Thi is a score-based timed quiz. Any wrong anser will result in your timer being cut down. good luck~</p>
+        <p>This is a score-based timed quiz. Any wrong answer will result in your timer being cut down. good luck~</p>
         <button type="button" id = "startButton" class="btn btn-primary btn-sm">Start Quiz</button>
     </div>
 
-    
+
+    <!--game over screen after either timer reach 0 or user finished the quiz-->
+    <div class = "gameOver hide">
+        <h2>Thank you for participating</h2>
+        <!--final score count-->
+        <p class = "finalScore"></p>
+        <form class="col-lg-6 offset-lg-3 ">
+            <p>Please submit your name</p>
+            <div class="d-flex justify-content-center">
+              <input type="text" placeholder="Example input">
+              <span class="input-group-btn">
+                <button class="btn btn-primary">submit</button>
+              </span>
+            </div>
+        </form>    
+    </div>
 
 
     <script src="script.js"></script>
