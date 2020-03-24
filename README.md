@@ -6,6 +6,8 @@ activity reference : 8-timer, 19-for pop-up highscore?, 23 -local storage, 27-fo
 useful links:
     changing display: https://www.w3schools.com/jsref/prop_style_display.asp 
 
+    showing the next question: https://stackoverflow.com/questions/15348725/how-to-make-quiz-questions-appear-one-at-a-time-in-javascript/15349714
+
 
 pseudocoding:
     1. create questions and answers relation with object and array
