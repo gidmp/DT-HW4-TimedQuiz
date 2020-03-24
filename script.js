@@ -1,10 +1,22 @@
 var startButton = document.getElementById("startButton");
 var getQuiz = document.getElementById("quizContainer");
-var timer = document.querySelector(".time");
-var secondsLeft = 100;
+var timer = document.getElementById("time");
+var gameOverScreen = document.getElementById("gameOver");
+var highScoreScreen = document.getElementById("hisgScore");
+
+var secondsLeft = 5;
 
 startButton.addEventListener("click", startQuiz);
+//add submit highscore and view highscore button
+//add choosing answer button to go to next question
 
+//function for screen transition
+function showHide(show, hide){
+    show.classList.remove("hide");     
+    hide.classList.add("hide"); 
+}
+
+//function for quiz start button
 function startQuiz(){
     console.log("starter test");
 
@@ -21,33 +33,34 @@ function setTime(){
     var timerInterval = setInterval(function(){
         secondsLeft--;
         timer.textContent = "Time Remaining: " + secondsLeft;
-
+    
+        //if you answer a question wrong cut timer by 3 seconds
 
         if(secondsLeft === 0) {
             clearInterval(timerInterval); 
-            //display a gameoverscreen
-            
-          }
+           //remove the main screen and show game over screen
+            showHide(gameOverScreen,getQuiz);  
+        }
     }, 1000);
 
     //if secondsLeft === 0 show a gameover and retry screen
-    //if you answer a question wrong cut timer by 3 seconds
     
 }
 
 function nextQuestion(){
+    //when an answer button is pressed, move on to the next question
+    //if out of question go to game over screen
 
 }
 
 function answer(){
-
-}
-
-function gameOver(){
+    //when an answer button is pressed keep tally of the score and 
+    //pass it along to viewHighScore
 
 }
 
 function viewHighScore(){
+    showHide(highScoreScreen,);
 
 }
 

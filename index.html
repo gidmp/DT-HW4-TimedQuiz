@@ -13,8 +13,16 @@
     <!--header of the app, showing highscore and timer-->
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">View Highscore</a>
-        <h5 class="time"></h5>
+        <h5 id="time"></h5>
     </nav>
+
+    <!--Start quiz-->
+    <div id = "intro">
+        <h2>Coding Quiz Challenge</h2>
+        <p>Thi is a score-based timed quiz. Any wrong anser will result in your timer being cut down. good luck~</p>
+        <button type="button" id = "startButton" class="btn btn-primary btn-sm">Start Quiz</button>
+    </div>
+    
 
     <!--showing the questions and choices-->
     <div id="quizContainer" class="container text-center hide">
@@ -27,17 +35,16 @@
         </div>
     </div>
 
+    <div id = "gameOver" class = "hide">
+        <h1>Game Over</h1>
+    </div>
+
+
     <!--Highscore-->
     <div id = "highScore" class = "hide">
         <h1>Highscore</h1>
     </div>
 
-    <!--Start quiz-->
-    <div class = "intro">
-        <h2>Coding Quiz Challenge</h2>
-        <p>Thi is a score-based timed quiz. Any wrong anser will result in your timer being cut down. good luck~</p>
-        <button type="button" id = "startButton" class="btn btn-primary btn-sm">Start Quiz</button>
-    </div>
 
     
 
