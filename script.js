@@ -1,10 +1,38 @@
+
+//question list
+var quizQuestions = [{
+    question: "up dog?",
+    answers: [
+        {word : "what is up dog?", verdict : true},
+        {word : "what?", verdict : false},
+        {word : "the numbers mason, what do they mean?", verdict : false},
+        {word : "hotdog", verdict : false},
+    ]        
+}, {
+    question: "which one of these is not the fellowship of the ring?",
+    answers: [
+        {word : "Frodo?", verdict : false},
+        {word : "Bilbo", verdict : true},
+        {word : "Legolas", verdict : false},
+        {word : "Gimli", verdict : false},
+    ]        
+}, 
+];
+
+
+
 var startButton = document.getElementById("startButton");
 var getQuiz = document.getElementById("quizContainer");
 var timer = document.getElementById("time");
+var questionEl = document.getElementById("question");
+var answerButtonEl = document.getElementById("answerButton");
 var gameOverScreen = document.getElementById("gameOver");
 var highScoreScreen = document.getElementById("hisgScore");
 
-var secondsLeft = 5;
+var questionIndex = 0;
+var getQuestion = quizQuestions[questionIndex];
+
+var secondsLeft =99;
 
 startButton.addEventListener("click", startQuiz);
 //add submit highscore and view highscore button
@@ -27,6 +55,10 @@ function startQuiz(){
     //start timer
     setTime();
 
+    //show the question based on index that increase by increments
+    showQuestion();
+    
+
 }
 
 function setTime(){
@@ -47,9 +79,18 @@ function setTime(){
     
 }
 
+function showQuestion(){
+    questionEl.innerHTML = "<p>" +  getQuestion.question + "<p>";
+    for(var i = 0; i < getQuestion.answers.length; i++){
+        //set each button to their corresponding answers
+        answerButtonEl.children[i].innerHTML = quizQuestions[questionIndex].answers[i].word;
+    }
+}
+
 function nextQuestion(){
     //when an answer button is pressed, move on to the next question
     //if out of question go to game over screen
+    //use carousel for this?
 
 }
 
@@ -60,26 +101,14 @@ function answer(){
 }
 
 function viewHighScore(){
-    showHide(highScoreScreen,);
+    showHide(highScoreScreen,gameOverScreen);
+    showHide(highScoreScreen,getQuiz);
+    showHide(highScoreScreen,startButton);
 
 }
 
 //list of questions and answers
-var quizQuestions = [{
-    question: "up dog?",
-    answers: [
-        {word : "what is up dog?", verdict : true},
-        {word : "what?", verdict : false},
-        {word : "the numbers mason, what do they mean?", verdict : false},
-        {word : "hotdog", verdict : false},
-    ]        
-}, {
-    question: "which one of these is not the fellowship of the ring?",
-    answers: [
-        {word : "Frodo?", verdict : false},
-        {word : "Bilbo", verdict : true},
-        {word : "Legolas", verdict : false},
-        {word : "Gimli", verdict : false},
-    ]        
-}, 
-];
+
+console.log(getQuestion.answers.length);
+console.log(answerButtonEl.children[questionIndex]);
+console.log(quizQuestions[questionIndex]);
