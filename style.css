@@ -6,7 +6,7 @@
     display: block;
 }
 
-.intro, .gameOver{
+ #intro, .gameOver{
     display: block;
     text-align: center;
 }
