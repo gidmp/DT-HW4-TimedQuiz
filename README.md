@@ -15,7 +15,8 @@ useful links:
 
     targeting multiple class or id : https://stackoverflow.com/questions/14408891/getelementbyid-multiple-ids
     
-    https://www.codemahal.com/video/javascript-quiz-tutorial/
+    examples:  https://www.codemahal.com/video/javascript-quiz-tutorial/
+    whne button was clicked : https://stackoverflow.com/questions/2788191/how-to-check-whether-a-button-is-clicked-by-using-javascript
 
 
 pseudocoding:
