@@ -14,6 +14,8 @@ useful links:
     showing the next question: https://stackoverflow.com/questions/15348725/how-to-make-quiz-questions-appear-one-at-a-time-in-javascript/15349714
 
     targeting multiple class or id : https://stackoverflow.com/questions/14408891/getelementbyid-multiple-ids
+    
+    https://www.codemahal.com/video/javascript-quiz-tutorial/
 
 
 pseudocoding:
