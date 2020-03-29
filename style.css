@@ -20,7 +20,7 @@
 
 .btn{
     background-color: purple;
-    margin: 10px 0 0 20px;;
+    margin: 10px 0 0 20px;
 }
 
 .hide{
@@ -30,3 +30,29 @@
 #question {
     font-size: 30px;
 }
+
+div{
+    margin-top: 40px;
+}
+
+ul{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+li {
+    height: 50px;
+    width: 500px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: orange;
+    color: white;
+    font-size: 1.5em;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  

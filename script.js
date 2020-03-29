@@ -1,20 +1,20 @@
 //question list
 var quizQuestions = [{
-    question: "up dog?",
+    question: "Inside which HTML element do we put the JavaScript?",
     answers: [
-        "what is up dog?",
-        "what?",
-        "the numbers mason, what do they mean?",
-        "hotdog",
+        "<script>",
+        "<scripting>",
+        "<js>",
+        "<javascript>",
     ],   
     correct : 0     
 }, {
-    question: "Which one of these are not the fellowship of the ring",
+    question: "How to write an IF statement in JavaScript?",
     answers: [
-        "Frodo",
-        "Gandalf",
-        "Bilbo",
-        "Gimli",
+        "if [i === 5]",
+        "if {i === 5}",
+        "if (i === 5)",
+        "if i === 5",
     ],   
     correct : 2     
 }, {
@@ -26,6 +26,33 @@ var quizQuestions = [{
         "time",
     ],   
     correct : 3     
+}, {
+    question: "How can you add a comment in a JavaScript?",
+    answers: [
+        "<!--hello-->",
+        "hello",
+        "'hello'",
+        "//hello",
+    ],   
+    correct : 3     
+}, {
+    question: "Which event occurs when the user clicks on an HTML element?",
+    answers: [
+        "onclick",
+        "onmouseclick",
+        "onhover",
+        "clickety-clack",
+    ],   
+    correct : 0     
+}, {
+    question: "Which one of these is not the member of the Fellowship of the Ring?",
+    answers: [
+        "Legolas",
+        "Gimli",
+        "Bilbo",
+        "Mithrandir",
+    ],   
+    correct : 2     
 }, 
 ];
 
@@ -63,16 +90,16 @@ function setTime(){
         secondsLeft--;
         timer.textContent = "Time Remaining: " + secondsLeft;
     
-        //if you answer a question wrong cut timer by 3 seconds
-
-        if(secondsLeft === 0) {
+        //stop timer when time runs out or the quiz is done.
+        if(secondsLeft === 0 || questionIndex >= quizQuestions.length) {
             clearInterval(timerInterval); 
            //remove the main screen and show game over screen
             viewGameOverScreen();  
         }
+
+
     }, 1000);
     //if secondsLeft === 0 show a gameover and retry screen
-    
 }
 
 
@@ -199,7 +226,7 @@ function submitIni(e){
         return;
     }
     //push initial and score into scoreStorage array then set them back to empty and 0
-    scoreStorage.push(scoreStorage.length + 1 + ". " + initial + "--you scored  " + score)
+    scoreStorage.push(scoreStorage.length + 1 + ". " + initial + "--you scored  " + score +" points")
     userInitialEl.value = "";
     score = 0;
 
