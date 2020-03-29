@@ -213,7 +213,7 @@ function submitIni(e){
 function clearHighScore(){
     var listAmt = highScoreListEl.childElementCount;
     var index = document.querySelectorAll("li");
-    
+
     scoreStorage.splice(index, listAmt);
 
     storeScores();
