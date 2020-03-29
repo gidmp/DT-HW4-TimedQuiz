@@ -85,6 +85,7 @@ function showHide(show, hide){
     hide.classList.add("hide"); 
 }
 
+//Set Time-------------------------------------------------------------------------
 function setTime(){
     var timerInterval = setInterval(function(){
         secondsLeft--;
@@ -102,7 +103,7 @@ function setTime(){
     //if secondsLeft === 0 show a gameover and retry screen
 }
 
-
+//Set Questions and checking answers-----------------------------------------------
 //function for quiz start button
 function startQuiz(){
     //remove intro scene and display the quiz question
@@ -175,7 +176,7 @@ function checkAnswer(e) {
     }
 }
 
-//High score and storage-------------------------------------------------------
+//Score and storage-------------------------------------------------------
 
 var scoreStorage = [];
 var userSumbitBtnEl = document.getElementById("userSubmitBtn");
