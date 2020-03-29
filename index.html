@@ -12,46 +12,48 @@
 <body>
     <!--header of the app, showing highscore and timer-->
     <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">View Highscore</a>
+        <a id = "highScoreBtn" class="navbar-brand" href="#">View Highscore</a>
         <h5 id="time"></h5>
     </nav>
 
     <!--Start quiz-->
     <div id = "intro">
         <h2>Coding Quiz Challenge</h2>
-        <p>Thi is a score-based timed quiz. Any wrong anser will result in your timer being cut down. good luck~</p>
+        <p>This is a score-based timed quiz. Any wrong answer will result in your timer being cut down. good luck~</p>
         <button type="button" id = "startButton" class="btn btn-primary btn-sm">Start Quiz</button>
     </div>
     
 
     <!--showing the questions and choices-->
-    <div id="quizContainer" class="container text-center hide">
-        <div id="question"><h4>spoodle</h4></div>
+    <div id = "quizContainer" class="container text-center hide">
+        <div id="question"></div>
         <div id = "answerButton"></div>
     </div>
 
-    <div id = "gameOver" class = "hide">
-        <h1>Game Over</h1>
-    </div>
 
 
     <!--Highscore-->
     <div id = "highScore" class = "hide">
         <h1>Highscore</h1>
+
+        <ul id = highScoreList></ul>
+
+        <button type="button" id = "goBack" class="btn btn-primary btn-sm">Go Back</button>
+        <button type="button" id = "clearScore" class="btn btn-primary btn-sm">Clear Highscore</button>
+
+
     </div>
 
 
-    <!--game over screen after either timer reach 0 or user finished the quiz-->
-    <div class = "gameOver hide">
+    <div id = "gameOver" class = "hide">
         <h2>Thank you for participating</h2>
-        <!--final score count-->
-        <p class = "finalScore"></p>
+        <p id = "finalScore"></p>
         <form class="col-lg-6 offset-lg-3 ">
-            <p>Please submit your name</p>
+            <p>Please submit your name or initial</p>
             <div class="d-flex justify-content-center">
-              <input type="text" placeholder="Example input">
+              <input id = "userInitial" type="text" placeholder="Insert initial">
               <span class="input-group-btn">
-                <button class="btn btn-primary multipleChoice">submit</button>
+                <button id = "userSubmitBtn" class="btn btn-primary">submit</button>
               </span>
             </div>
         </form>    

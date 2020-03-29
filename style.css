@@ -6,9 +6,9 @@
     display: block;
 }
 
- #intro, .gameOver{
+ #highScore, #intro, #gameOver{
     display: block;
-    text-align: center;
+    text-align: center !important;
 }
 
 #startButton{
@@ -20,9 +20,13 @@
 
 .btn{
     background-color: purple;
-    margin: 10px 0;
+    margin: 10px 0 0 20px;;
 }
 
 .hide{
-    display: none;
+    display: none !important;
+}
+
+#question {
+    font-size: 30px;
 }
